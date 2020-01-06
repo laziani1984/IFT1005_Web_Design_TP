@@ -1,0 +1,151 @@
+
+<!--Presenté par Ahmed Mohamed et Wael Abou Ali-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title> Nouveau utilisateur </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" type="text/css" href="color.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Monsieur+La+Doulaise' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet'>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["email"].value;
+            var y = document.forms["myForm"]["ConE-mail"].value;
+            var z = document.forms["myForm"]["Password"].value;
+            var n = document.forms["myForm"]["ConPass"].value;
+            if ((x == y) && (z == n)) {
+                return true;
+            }
+            else {
+                alert("Adresse courriel ou mot de passe pas valide");
+                return false;
+            }
+        }
+
+        setTimeout(function(){
+            document.body.className="";
+        },500);
+    </script>
+</head>
+<body>
+<header>
+    <a href=http://linkedin.com/sanitas-groceries id="linkedin"></a>
+    <a href=http://twitter.com/sanitas-groceries id="twitter"></a>
+    <a href=http://facebook.com/sanitas-groceries id="facebook"></a>
+    <a href="login.html" class="margin-top2" style="display: inline-block;width: 200px" id="connexion"
+       onmouseover="document.getElementById('login').src='images/logo-login.png';
+         document.getElementById('margleft').style.color='red';" onmouseout="document.getElementById('login').src='images/logo-login-grey.png';
+         document.getElementById('margleft').style.color='darkgrey';">
+        <img src="images/logo-login-grey.png" id="login" alt="connexion"/>&nbsp;
+        <p class="vertical-align-middle line-height3 display" id="margleft">CONNEXION</p>
+    </a>
+</header>
+<br>
+<div class="nav-color">
+    <br>
+    <nav class="container">
+        <a href="Acceuil.html">ACCEUIL</a>
+        <a href="à_propos.html">À PROPOS</a>
+        <a href="design.html">DESIGN</a> &nbsp;
+        <div class="dropdown">
+            <a href="#" class="dropbtn">MAGASINEZ</a><br><br><br>
+            <div class="dropdown-content">
+                <a href="magasinez.html">NOS PRODUITS</a>
+                <a href="forms.html">FORMULAIRES D'ACHATS</a> &nbsp;
+            </div>
+        </div> &nbsp;
+        <div class="dropdown">
+            <a href="#" class="dropbtn">ORGANIQUE + </a><br><br><br>
+            <div class="dropdown-content">
+                <a href="info.html">INFO</a>
+                <a href="santé.html">VALEURS NUTRITIVES</a>
+                <a href="http://www.organicitsworthit.org/make/organic-recipes">RECETTES</a>
+            </div>
+        </div>
+        <a href="contact.html">NOUS JOINDRE</a>
+
+    </nav>
+</div>
+<div class="who1">
+<main class="main-class">
+    <div class="text-align">
+        <form name="myForm" action="http://www-etud.iro.umontreal.ca/~morinleo/form_print.php" method="post" onsubmit="return validateForm();">
+            <div>Details de votre compte</div><br>
+            <label for="E-mail">E-mail</label>
+            <input type="email" name="email" id="E-mail" value="" placeholder="adresse courriel">
+            <label for="ConE-mail">Confirmez votre Email*</label>
+            <input type="email" name="ConE-mail" id="ConE-mail" value="" placeholder="Confirmez l'adresse courriel" required><br>
+            <label for="Password">Mot de passe</label>
+            <input type="password" name="Password" id="Password" pattern=".{5,10}" value="" placeholder="Mot de passe">
+            <label for="ConPass">Confirmez votre mot de passe*</label>
+            <input type="password" name="ConPass" id="ConPass" pattern=".{5,10}" value="" placeholder="Confirmez votre mot de passe" required><br><br>
+            <div>Details personnels</div><br>
+            <label for="Gendre">Gendre*</label>
+            <select name="Gendre" id="Gendre" required>
+                <option value="">Choix</option>
+                <option value="0">Homme</option>
+                <option value="1">Femme</option>
+            </select>
+            <label for="Langue">Langue*</label>
+            <select name="Langue" id="Langue" required>
+                <option value="">Langue</option>
+                <option value="EN">English</option>
+                <option value="FR">Français</option>
+            </select><br>
+            <label for="Name">Nom*</label>
+            <input type="text" name="Name" id="Name" value="" placeholder="Votre Nom" required>
+            <label for="Prénom">Prénom*</label>
+            <input type="text" name="Prénom" id="Prénom" value="" placeholder="Votre Prénom" required><br>
+            <label for="Birth">date de naissance*</label>
+            <input type="text" name="Birth" id="Birth" value="" placeholder="mm-dd-yyyy" required>
+            <label for="adresse">Votre adresse*</label>
+            <input type="text" name="adresse" id="adresse" value="" required><br>
+            <label for="tel">Telephone/cellulaire*</label>
+            <input type="tel" name="tel" id="tel" value="" required><br>
+            <br>
+            <input class="adjust" type="checkbox" name="checkbox" id="checkbox" value="agreed" required>* J'accepte les conditions du site et les informations relatives au traitement des données personnelles<br>
+            <input class="adjust" type="checkbox" name="checkbox1" id="checkbox1" value="Newsletter" required>* Je souhaite recevoir des promotions, des remises et des communications ciblées sur la base des données fournies<br>
+            <input type="submit" name="submit">
+        </form>
+    </div>
+</main>
+</div>
+<footer id="mk-footer">
+    <div class="footer-wrapper mk-grid">
+        <div class="mk-padding-wrapper">
+            <div class="">
+                <div id="widget_sp_image-2" class="widget widget_sp_image">
+                    <img width="745" height="113" alt="footerlogos" class="attachment-full aligncenter"
+                         style="max-width: 100%;"
+                         src="images/footerlogo3.jpg"/>
+                </div>
+                <div class="links-footer">
+                    <a href="Acceuil.html">Acceuil</a>&nbsp;&nbsp;&nbsp;
+                    <a href="à_propos.html">À propos</a>&nbsp;&nbsp;&nbsp;
+                    <a href="design.html">Design</a> &nbsp;&nbsp;&nbsp;
+                    <a href="magasinez.html">Magasinez</a> &nbsp;&nbsp;&nbsp;
+                    <a href="info.html">Info</a>&nbsp;&nbsp;&nbsp;
+                    <a href="santé.html">Valeurs Nutritives</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.organicitsworthit.org/make/organic-recipes">Recettes</a>&nbsp;&nbsp;&nbsp;
+                    <a href="contact.html">Nous Joindre</a>&nbsp;&nbsp;&nbsp;
+                </div>
+                <br>
+                <div id="text-3" class="widget widget_text">
+                    <div class="textwidget"><p style="text-align:center;font-family: 'Nova Square'">Association
+                        canadienne du commerce biologique © 2017 avec Le soutien d'Agriculture et Agroalimentaire Canada
+                        par Growing Forward 2 | Pour plus
+                        Contact d'information <a href="mailto:info@sanitaorganics.ca" target="_blank"><span
+                                style="color: #fff;"> info@sanitaorganics.ca</span></a> | #SanitasOrganics</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

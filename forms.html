@@ -1,0 +1,175 @@
+<!--Presenté par Ahmed Mohamed et Wael Abou Ali-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title> Forms </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" type="text/css" href="color.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Monsieur+La+Doulaise' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet'>
+</head>
+<body>
+<header>
+    <a href=http://linkedin.com/sanitas-groceries id="linkedin"></a>
+    <a href=http://twitter.com/sanitas-groceries id="twitter"></a>
+    <a href=http://facebook.com/sanitas-groceries id="facebook"></a>
+    <a href="login.html" class="margin-top2" style="display: inline-block;width: 200px" id="connexion"
+       onmouseover="document.getElementById('login').src='images/logo-login.png';
+         document.getElementById('margleft').style.color='red';" onmouseout="document.getElementById('login').src='images/logo-login-grey.png';
+         document.getElementById('margleft').style.color='darkgrey';">
+        <img src="images/logo-login-grey.png" id="login" alt="connexion"/>&nbsp;
+        <p class="vertical-align-middle line-height3 display" id="margleft">CONNEXION</p>
+    </a>
+</header>
+<br>
+<div class="nav-color" id="unwho">
+    <br>
+    <nav class="container">
+        <a href="Acceuil.html">ACCEUIL</a>
+        <a href="à_propos.html">À PROPOS</a>
+        <a href="design.html">DESIGN</a> &nbsp;
+        <div class="dropdown">
+            <a href="#" class="dropbtn">MAGASINEZ</a><br><br><br>
+            <div class="dropdown-content">
+                <a href="magasinez.html">NOS PRODUITS</a>
+                <a href="forms.html">FORMULAIRES D'ACHATS</a> &nbsp;
+            </div>
+        </div> &nbsp;
+        <div class="dropdown">
+            <a href="#" class="dropbtn">ORGANIQUE+</a><br><br><br>
+            <div class="dropdown-content">
+                <a href="info.html">INFO</a>
+                <a href="santé.html">VALEURS NUTRITIVES</a>
+                <a href="http://www.organicitsworthit.org/make/organic-recipes">RECETTES</a>
+            </div>
+        </div>
+        <a href="contact.html">NOUS JOINDRE</a>
+
+    </nav>
+</div>
+<div class="who1">
+    <main class="main-class adjustPadding">
+        <div>
+            <details>
+                <summary>LIVRAISON À DOMICILE</summary>
+                <form action="http://www-etud.iro.umontreal.ca/~morinleo/form_print.php" method="post">
+                    <p>
+                        <label for="nom">NOM*</label><br>
+                        <input name="nom" id="nom" placeholder="*VOTRE NOM*" value="" required>
+                    </p>
+                    <p>
+                        <label for="prenom">PRÉNOM*</label><br>
+                        <input type="text" name="prenom" id="prenom" placeholder="*VOTRE PRÉNOM*" value="" required>
+                    </p>
+                    <p>
+                        <label for="email">USERNAME</label><br>
+                        <input type="email" name="email" id="email" value="" placeholder="*VOTRE EMAIL*">
+                    </p>
+                    <p>
+                        <label for="password">MOT DE PASSE</label><br>
+                        <input type="password" name="password" id="password" value=""
+                               placeholder="*VOTRE MOT DE PASSE*">
+                    </p>
+                    <p>
+                        <label for="adresse">ADRESSE*</label><br>
+                        <input type="text" name="adresse" id="adresse" value="" placeholder="*VOTRE ADRESSE*" required>
+                    </p>
+                    <p>
+                        <label for="Ordre">ORDRE*</label><br>
+                        <textarea name="Ordre" id="Ordre" cols="60" rows="10"
+                                  placeholder="*Veuillez placer votre ordre içi*" required></textarea>
+                    </p>
+                    <input class="adjust" type="submit" value="Soumettre">
+                    <input class="adjust" type="reset" value="Annuler">
+                </form>
+            </details>
+            <hr>
+            <details>
+                <summary>RAMASSAGE</summary>
+                <form action="http://www-etud.iro.umontreal.ca/~morinleo/form_print.php" method="post">
+                    <p>
+                        <label for="nomPU">NOM*</label><br>
+                        <input name="nom" id="nomPU" placeholder="*VOTRE NOM*" value="" required>
+                    </p>
+                    <p>
+                        <label for="prenomPU">PRÉNOM*</label><br>
+                        <input type="text" name="prenom" id="prenomPU" placeholder="*VOTRE PRÉNOM*" value="" required>
+                    </p>
+                    <p>
+                        <label for="emailPU">USERNAME</label><br>
+                        <input type="email" name="email" id="emailPU" value="" placeholder="*VOTRE EMAIL*">
+                    </p>
+                    <p>
+                        <label for="passwordPU">MOT DE PASSE</label><br>
+                        <input type="password" name="password" id="passwordPU" pattern=".{5,10}"
+                               title="Veuillez entrer entre 5 et 10 caractères" value=""
+                               placeholder="*VOTRE MOT DE PASSE*">
+                    </p>
+                    <p>
+                        <label for="Ordre">ORDRE*</label><br>
+                        <textarea name="Ordre" id="OrdrePU" cols="60" rows="10"
+                                  placeholder="Veuillez placer votre ordre içi" required></textarea>
+                    </p>
+                    <p>
+                        <label>LIEU DE RAMASSAGE</label><br>
+                        <input class="adjust" type="radio" name="ramassage" value="0" checked><a
+                            href="https://www.google.ca/maps/place/Saint-Laurent,+QC+H4N+1N3/@45.5294268,-73.6832552,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc918628a0f7867:0x30ebd27346244c61!8m2!3d45.5292579!4d-73.6811727" class="aVisited">&nbsp;CafeJavaJam</a><br>
+                        <input class="adjust" type="radio" name="ramassage" value="1"><a
+                            href="https://www.google.ca/maps/place/Caf%C3%A9+Myriade+-+Dominion+Square/@45.5004585,-73.5719837,15z/data=!4m5!3m4!1s0x0:0x1f6aefb56908171b!8m2!3d45.5004585!4d-73.5719837" class="aVisited">&nbsp;Myriade
+                        Club Monaco</a><br>
+                        <input class="adjust" type="radio" name="ramassage" value="2"><a
+                            href="https://www.google.ca/maps/place/Caf%C3%A9+Castel/@45.502096,-73.5787466,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a40d38294fd:0x2ce234ad505a19c7!8m2!3d45.5020923!4d-73.5765579" class="aVisited">&nbsp;Café
+                        Castel</a><br>
+                        <input class="adjust" type="radio" name="ramassage" value="3"><a
+                            href="https://www.google.ca/maps/place/Cagibi+(Le)/@45.5256382,-73.5988767,15z/data=!4m5!3m4!1s0x0:0xa60e488d16fb00bf!8m2!3d45.5256382!4d-73.5988767" class="aVisited">&nbsp;Café
+                        Le Cajibi</a><br>
+                        <input class="adjust" type="radio" name="ramassage" value="4"><a
+                            href="https://www.google.ca/maps/place/Caf%C3%A9+Parvis/@45.5058013,-73.5714597,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a45f69053bb:0x9197a73a49c4c163!8m2!3d45.5057976!4d-73.569271" class="aVisited">&nbsp;Café
+                        Parvis</a><br>
+                    </p>
+                    <input class="adjust" type="submit" value="Soumettre">
+                    <input class="adjust" type="reset" value="Annuler">
+
+                </form>
+            </details>
+        </div>
+    </main>
+</div>
+<footer id="mk-footer">
+    <div class="footer-wrapper mk-grid">
+        <div class="mk-padding-wrapper">
+            <div class="">
+                <div id="widget_sp_image-2" class="widget widget_sp_image">
+                    <img width="745" height="113" alt="footerlogos" class="attachment-full aligncenter"
+                         style="max-width: 100%;"
+                         src="images/footerlogo3.jpg"/>
+                </div>
+                <div class="links-footer">
+                    <a href="Acceuil.html">Acceuil</a>&nbsp;&nbsp;&nbsp;
+                    <a href="à_propos.html">À propos</a>&nbsp;&nbsp;&nbsp;
+                    <a href="design.html">Design</a> &nbsp;&nbsp;&nbsp;
+                    <a href="magasinez.html">Magasinez</a> &nbsp;&nbsp;&nbsp;
+                    <a href="info.html">Info</a>&nbsp;&nbsp;&nbsp;
+                    <a href="santé.html">Valeurs Nutritives</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.organicitsworthit.org/make/organic-recipes">Recettes</a>&nbsp;&nbsp;&nbsp;
+                    <a href="contact.html">Nous Joindre</a>&nbsp;&nbsp;&nbsp;
+                </div>
+                <br>
+                <div id="text-3" class="widget widget_text">
+                    <div class="textwidget"><p style="text-align:center;font-family: 'Nova Square'">Association
+                        canadienne du commerce biologique © 2017 avec Le soutien d'Agriculture et Agroalimentaire Canada
+                        par Growing Forward 2 | Pour plus
+                        Contact d'information <a href="mailto:info@sanitaorganics.ca" target="_blank"><span
+                                style="color: #fff;"> info@sanitaorganics.ca</span></a> | #SanitasOrganics</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
